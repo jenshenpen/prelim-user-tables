@@ -11,7 +11,23 @@ library(ggplot2)
 ```
 
 ```{r load_data, include=FALSE}
+abanorth <- read.table("01_data/cleaned/17-03-08_abia_abanorth.csv", sep = ",", header = TRUE)
+abasouth <- read.table("01_data/cleaned/17-03-08_abia_abasouth.csv", sep = ",", header = TRUE)
+isuikwato <- read.table("01_data/cleaned/17-03-08_abia_isuikwato.csv", sep = ",", header = TRUE)
+ohafia <- read.table("01_data/cleaned/17-03-08_abia_ohafia.csv", sep = ",", header = TRUE)
+umuahia_north <- read.table("01_data/cleaned/17-03-08_abia_umuahianorth.csv", sep = ",", header = TRUE)
+umuahia_south <- read.table("01_data/cleaned/17-03-08_abia_umuahiasouth.csv", sep = ",", header = TRUE)
+akamkpa <- read.table("01_data/cleaned/17-03-08_crossriver_akamkpa.csv", sep = ",", header = TRUE)
+akpabuyo <- read.table("01_data/cleaned/17-03-08_crossriver_akpabuyo.csv", sep = ",", header = TRUE)
+biase <- read.table("01_data/cleaned/17-03-08_crossriver_biase.csv", sep = ",", header = TRUE)
+calabar <- read.table("01_data/cleaned/17-03-08_crossriver_calabar.csv", sep = ",", header = TRUE)
+odukpani <- read.table("01_data/cleaned/17-03-08_crossriver_odukpani.csv", sep = ",", header = TRUE)
+yakurr <- read.table("01_data/cleaned/17-03-08_crossriver_yakurr.csv", sep = ",", header = TRUE)
 
+# append
+combined <- rbind(abanorth, abasouth, akamkpa, akpabuyo, biase,  
+                  calabar, isuikwato, odukpani, ohafia, umuahia_south, 
+                  umuahia_north, yakurr)
 ```
 
 ## Description
